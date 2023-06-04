@@ -1,0 +1,191 @@
+<iframe title="sandbox" frameborder="0" srcdoc="
+<style>
+  body {
+    background-color: white;
+  }
+</style>
+<style>body {
+    font-family: sans-serif;
+    background-color: rgb(0, 0, 0);
+}
+
+header {
+    justify-content: space-between;
+    padding: ;
+    margin-bottom: 20px;
+}
+
+.button {
+    background-color: #36bbce;
+    color: black;
+    text-decoration: none;
+    padding: 15px;
+    font-size: 24px;
+    border-radius: 10px;
+}
+
+nav {
+    border-top: 5px solid white;
+    border-bottom: 5px solid white;
+    padding: 25px 100px 25px 95px;
+    justify-content: space-between;
+}
+
+.nav-link {
+    font-size: 24px;
+    color: black;
+    text-decoration: none;
+}
+
+h1 {
+    text-align: center;
+    color: black;
+    font-size: 36px;
+    margin-top: ;
+    margin-bottom: ;
+}
+
+p {
+    font-size: 24px;
+}
+
+.info {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    width: 1100px;
+    margin: 0px;
+}
+
+article {
+    background-color: white;
+    padding: ;
+    width: 400px;
+    margin: ;
+    justify-content: space-around;
+    text-align:center;
+}
+
+.article-but {
+    text-decoration: none;
+    background-color: grey;
+    color: black;
+    font-size: 24px;
+    text-align: center;
+    padding: 10px 75px 10px 75px;
+    justify-content: space-around
+}
+
+footer {
+    background-color: rgb(0, 0, 0);
+    padding: ;
+}
+
+footer a {
+    margin-right: ;
+}
+
+footer p {
+    font-size: 24px;
+    flex-direction: ;
+}
+</style>
+<script type=&quot;text/javascript&quot; src=&quot;/singlepage/root/jasmine/jasmine.js&quot;></script>
+<script type=&quot;text/javascript&quot; src=&quot;/singlepage/root/jasmine/boot.js&quot;></script>
+<script type=&quot;text/javascript&quot; src=&quot;/singlepage/root/jasmine/dom-matchers.js&quot;></script>
+
+<script defer>
+
+ window.addEventListener('scroll', function(evt) {
+    var event = new CustomEvent('scroll-window', {
+        detail: {scrollTop: window.scrollY, scrollLeft: window.scrollX}
+    });
+    window.parent.document.dispatchEvent(event);
+ });
+
+ window.addEventListener(&quot;DOMContentLoaded&quot;, function() {
+   document.addEventListener(
+      'click',
+      function(e) {
+        if (!e.target) return;
+        var parent = e.target;
+        while (parent) {
+          if (parent.tagName === 'A') {
+            try {
+              var url = parent.getAttribute('href');
+              if (!url) return;
+              var el = document.querySelector(url);
+              if (!el) {
+                el = document.querySelector('[name=&quot;' + url +'&quot;]');
+              }
+              if (el &amp;&amp; el.scrollIntoView) {
+                e.preventDefault();
+                el.scrollIntoView();
+              }
+            } catch (e) {}
+            return;
+          }
+          parent = parent.parentNode;
+        }
+      },
+      true,
+    );
+ })
+</script>
+
+<script defer>
+window.addEventListener(&quot;DOMContentLoaded&quot;, function() {
+;window.__JS_SOURCE__ = &quot;&quot;;;jasmine.getEnv().execute();});</script><html>
+    <head>
+        <title>BitMarket</title>
+        <link rel=&quot;stylesheet&quot; href=&quot;style.css&quot;>
+    </head>
+    <body>
+        <header>
+            <img src=&quot;https://backoffice.algoritmika.org/uploads/2021/02/logo_0_1613588860.svg&quot;>
+            <a class=&quot;button&quot; href=&quot;&quot;>Скидки</a>
+        </header>
+        <nav>
+            <a class=&quot;nav-link&quot; href=&quot;&quot;>Каталог</a>
+            <a class=&quot;nav-link&quot; href=&quot;&quot;>Оптом</a>
+            <a class=&quot;nav-link&quot; href=&quot;&quot;>Доставка</a>
+            <a class=&quot;nav-link&quot; href=&quot;&quot;>Возврат товара</a>
+        </nav>
+        <main>
+            <h1>Профессионалы советуют</h1>
+            <section class=&quot;info&quot;>
+                <article>
+                    <h2>Лэптоп для отдыха</h2>
+                    <img src=&quot;https://backoffice.algoritmika.org/uploads/2021/02/notebook-405755_1920_0_1613586011.jpg&quot; width=&quot;400px&quot; height=&quot;300px&quot;/>
+                    <p>Samsung V145-S</p>
+                    <a class=&quot;article-but&quot; href=&quot;&quot;>Подробнее</a>
+                </article>
+                <article>
+                    <h2>Как выбрать наушники</h2>
+                    <img src=&quot;https://backoffice.algoritmika.org/uploads/2021/02/music-1813100_1280_0_1613586010.png&quot; width=&quot;330px&quot; height=&quot;300px&quot;/>
+                    <p>Поговорим о новинках</p>
+                    <a class=&quot;article-but&quot; href=&quot;&quot;>Подробнее</a>
+                </article>
+                <article>
+                    <h2>Телефон мечты</h2>
+                    <img src=&quot;https://backoffice.algoritmika.org/uploads/2021/02/mobile-phone-1875813_1920_0_1613586011.jpg&quot; width=&quot;400px&quot; height=&quot;300px&quot;/>
+                    <p>Apple iphone 13</p>
+                    <a class=&quot;article-but&quot; href=&quot;&quot;>Подробнее</a>
+                </article>
+                <article>
+                    <h2>Техника для всего</h2>
+                    <img src=&quot;https://backoffice.algoritmika.org/uploads/2021/02/laptop-1483974_1920_0_1613586010.jpg&quot; width=&quot;400px&quot; height=&quot;300px&quot;/>
+                    <p>И целого мира мало...</p>
+                    <a class=&quot;article-but&quot; href=&quot;&quot;>Подробнее</a>
+                </article>
+            </section>
+            <img src=&quot;https://backoffice.algoritmika.org/uploads/2021/02/mobile-phone-1419275_1920_0_1613586010.jpg&quot; width=&quot;960&quot; height=&quot;270&quot;/>
+        </main>
+        <footer>
+            <a href=&quot;&quot;><img src=&quot;https://backoffice.algoritmika.org/uploads/2021/02/icon-set-1142000_1280%201_0_1613586391.png&quot; width=&quot;80px&quot; height=&quot;80px&quot;></a>
+            <a href=&quot;&quot;><img src=&quot;https://backoffice.algoritmika.org/uploads/2021/02/Group%201_0_1613586391.png&quot; width=&quot;80px&quot; height=&quot;80px&quot;></a>
+            <a href=&quot;&quot;><img src=&quot;https://backoffice.algoritmika.org/uploads/2021/02/instagram-3288419_1280%201_0_1613586391.png&quot; width=&quot;80px&quot; height=&quot;80px&quot;></a>
+            <p><b>Напиши — получи<br/> промокод!</b></p> 
+        </footer>
+    </body>
+</html>" width="100%" height="100%"></iframe>
